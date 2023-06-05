@@ -23,7 +23,7 @@ Leverages alternate shorthand PS commands like "saps", "gc" start a process and 
 
 DLL Execution Example: <br>  
 =======================
-Create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
+Create a trojan PS1 file that will try to download and execute a remote DLL named "1.d"
 
 Python: <br>  
 from base64 import b64encode <br>  
