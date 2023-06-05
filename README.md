@@ -1,7 +1,8 @@
 # PSTrojanFile
 Windows PowerShell Filename Code Execution POC
 
-Dusted this off and improved it a bit, reported to Microsoft in 2019 remains unfixed as of the time of this writing. Remote code execution via a specially crafted filename. 
+Dusted this off and improved it a bit, reported to Microsoft in 2019 remains unfixed as of the time of this writing. Remote code execution via a specially crafted filename. <br>  
+
 The flaw is due to semicolon ";" we can decode a Base64 command and execute straight from the PS1 filename or just call shorthand commands.
 
 Test;POweRsHeLL -e [BASE64 PAYLOAD];.ps1
