@@ -1,7 +1,12 @@
 # PSTrojanFile
 Windows PowerShell Filename Code Execution POC
 
-Dusted this off and improved it a bit, reported to Microsoft in 2019 remains unfixed as of the time of this writing. <br>  
+Dusted this off and improved it a bit: <br> 
+1) Execute a remote DLL using rundll32
+2) Execute an unintended PS script (for a short non base64 encoded filename)
+3) Execute a hidden text-file: Testing;saps (gc -) PoC.ps1  (Optional: attrib +s +h text-file)
+
+First reported to Microsoft back in 2019 yet remains unfixed as of the time of this writing. <br>  
 Remote code execution via a specially crafted filename. <br>  
 
 The flaw is due to semicolon ";" we can decode a Base64 command and execute straight from the PS1 filename or just exec commands.
@@ -11,10 +16,6 @@ Test;POweRsHeLL -e [BASE64 PAYLOAD];.ps1 <br>
 OR just call commands straight away! <br>  
 
 Testing;saps (gc -) PoC.ps1
-
-1) Execute a remote DLL using rundll32
-2) Execute an unintended PS script (for a short non base64 encoded filename)
-3) Execute a hidden text-file: Testing;saps (gc -) PoC.ps1  (Optional: attrib +s +h text-file)
 
 Vectors: double click, drag and drop to PS shortcut
 Requirements: user must have the following setting to call a secondary script
