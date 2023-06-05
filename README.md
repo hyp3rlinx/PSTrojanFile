@@ -21,7 +21,9 @@ Vectors: double click, drag and drop to PS shortcut
 
 Leverages alternate shorthand PS commands like "saps", "gc" start a process and get-content etc.
 
-DLL Execution Example: create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
+DLL Execution Example: <br>  
+=======================
+Create a trojan PS1 file that will try to download and execute a remote DLL namec "1.d"
 
 Python: <br>  
 from base64 import b64encode <br>  
@@ -58,7 +60,8 @@ python -m http.server 80
 Double click the trojan PS1 file. <br>  
 
 
-Text-file Based Code Execution Example: <br>  
+Text-file Code Execution Example: <br> 
+======================================
 
 Create a PS1 file with name including saps "start a process" and gc "get-content", this will read commands from hidden file. <br>  
 
@@ -68,13 +71,14 @@ Create hidden: attrib +s +h "-" <br>
 
 Double click or drag and drop.
 
-Exploit Requirements: <br>  
+Requirements: <br>  
+=====================
 
 a) PowerShell PS1 files must be set to open with PowerShell as the default program <br>  
 
 b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force <br>  
 
-c) User must double-click or drag and drop the maliciously named PS1 script
+c) User must double-click or drag and drop the maliciously named PS1 script <br>  
 
 
 
