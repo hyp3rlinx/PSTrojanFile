@@ -20,8 +20,10 @@ Call commands straight away <br>
 Vectors: double click, drag and drop to PS shortcut
 Exploit Requirements: <br>  
 
-a) PowerShell PS1 files must be set to open with PowerShell as the default program
-b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+a) PowerShell PS1 files must be set to open with PowerShell as the default program <br>  
+
+b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force <br>  
+
 c) User must double-click or drag and drop the maliciously named PS1 script
 
 Leverages alternate shorthand PS commands like "saps", "gc" start a process and get-content etc.
