@@ -1,7 +1,7 @@
 # PSTrojanFile
 Windows PowerShell Filename Code Execution POC
 
-Dusted this off and improved it a bit: <br> 
+Dusted off and improved: <br> 
 1) Execute a remote DLL using rundll32
 2) Execute an unintended secondary PS1 script or hidden text-file
 3) Updated the PS1 Trojan Filename Creator Python3 Script
@@ -11,7 +11,7 @@ Remote code execution via a specially crafted filename. <br>
 
 The flaw is due to semicolon ";" we can decode a Base64 command and execute straight from the PS1 filename or just exec commands.
 
-Test;POweRsHeLL -e [BASE64 PAYLOAD];.ps1 <br>  
+Test;POweRsHeLL -e [BASE64 UTF-16LE PAYLOAD];.ps1 <br>  
 
 OR just call commands straight away <br>  
 
