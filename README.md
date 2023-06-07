@@ -84,3 +84,6 @@ c) User must double-click, run from cmd line or drag and drop the maliciously na
 
 Video PoC:
 
+![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/24697d53-b5d2-4bdb-a20a-3240524cc7cc)
+
+
