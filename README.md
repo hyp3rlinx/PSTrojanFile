@@ -1,5 +1,6 @@
 # PSTrojanFile
-Windows PowerShell Filename Code Execution POC
+Windows PowerShell Filename Code Execution POC <br>  
+Discovery: John Page (aka hyp3rlinx) 2019 and revisted 2023
 
 Since it still works, I dusted off and made minor improvements: <br> 
 1) Execute a remote DLL using rundll32
