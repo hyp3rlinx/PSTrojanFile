@@ -81,12 +81,10 @@ b) Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force <br>
 
 c) User must double-click, run from cmd line or drag and drop the maliciously named PS1 script <br>  
 
-
-![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/28846bd1-a8c6-48c6-8764-e95d8644520f)
-
-
-
 https://www.youtube.com/watch?v=-ZJnA70Cf4I
+
+
+![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/31317076-6ceb-4b28-8062-9c8863b0831d)
 
 
 
