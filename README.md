@@ -86,7 +86,7 @@ c) User must double-click, run from cmd line or drag and drop the maliciously na
 
 
 
-https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/96955652-2ae5-4de8-bd14-2df1d21a8cfe
+https://www.youtube.com/watch?v=-ZJnA70Cf4I
 
 
 
