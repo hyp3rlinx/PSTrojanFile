@@ -86,3 +86,9 @@ Video PoC:
 
 
 
+
+
+https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/96955652-2ae5-4de8-bd14-2df1d21a8cfe
+
+
+
