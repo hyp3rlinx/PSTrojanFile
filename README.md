@@ -114,9 +114,3 @@ https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/b033b9f8-1ea0-4ea3-9fa
 
 
 
-
-
-
-https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/3ff3e218-4b64-406f-ab5b-05283062e609
-
-
