@@ -1,5 +1,5 @@
 # PSTrojanFile
-Windows PowerShell Filename and Defender Anti-Malware PowerShell API Code Execution POC <br>  
+Windows PowerShell Filename and Defender Anti-Malware API - Code Execution POC <br>  
 Discovery: John Page (aka hyp3rlinx) 2019 and revisted 2023
 
 Updated: Dec 7, 2023 added CL and Windows Defender API vector, see below:
