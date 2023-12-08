@@ -2,7 +2,7 @@
 Windows PowerShell Filename Code Execution POC <br>  
 Discovery: John Page (aka hyp3rlinx) 2019 and revisted 2023
 
-Updated: added CL and Windows Defender API vector, see below:
+Updated: Dec 7, 2023 added CL and Windows Defender API vector, see below:
 
 Since it still works, I dusted off and made minor improvements: <br> 
 1) Execute a remote DLL using rundll32
