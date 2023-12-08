@@ -100,7 +100,7 @@ Requirements:
 1) On CL 'powershell' cmd is prefixed or passed in by calling PowerShell from another script
 2) Executable file of same name as the parameter that lives nearby
 
-Examples:
+Examples: <br>
 powershell Start-MpScan -Scanpath "C:\Users\gg\Downloads\;saps Helper;.1.zip"
 (Helper.exe lives on Desktop)
 
