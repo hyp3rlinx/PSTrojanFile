@@ -88,6 +88,8 @@ https://www.youtube.com/watch?v=-ZJnA70Cf4I
 
 https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/029d41d2-af58-434d-8d0f-0bf8f01d1c55
 
+![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/31317076-6ceb-4b28-8062-9c8863b0831d)
+
 Update: Microsoft Defender Anti-Malware PowerShell API - Arbitrary Code Execution.
 
 Microsoft Defender Anti Malware and or PS API's can result in executing arbitrary code.
@@ -111,9 +113,6 @@ powershell Set-ProcessMitigation -PolicyFilePath  "test;saps doom"
 https://www.youtube.com/watch?v=0Go6yJiRWP8
 
 
-
-
-![PSTrojanFile](https://github.com/hyp3rlinx/PSTrojanFile/assets/12366009/31317076-6ceb-4b28-8062-9c8863b0831d)
 
 
 
