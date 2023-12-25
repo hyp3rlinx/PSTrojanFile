@@ -17,7 +17,7 @@ powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected&Malware;.zip' 
 
 Where Malware.exe lives in the same directory, think drive-by download. <br>
 
-Windows Event log fail, PS event ID 403, fails to show full path and filename due to truncating: <br>
+Windows Event log fail, PS event ID 403, fails to show full path and filename due to truncating: <br> <br>
 E.g. PS log snippet:<br>
 HostApplication=powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected <br>
 EngineVersion=5.1.19041.3803 <br>
