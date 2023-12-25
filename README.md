@@ -9,7 +9,7 @@ Semicolon and friend "&" operator join forces for arbitrary code exec capabiliti
 
 Run some malware:
 C:\Users\gg\Downloads>powershell get-filehash  'Infected&ScanMe;.zip'  -algorithm  md5 <br>
-PE file Malware.exe in the Downloads directory. <br>
+Where Malware.exe lives in the same directory. <br>
 powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected&Malware;.zip' <br>
 
 PowerShell Event ID 403, logging fails due to truncating: <br>
